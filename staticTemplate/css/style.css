@@ -4,6 +4,7 @@ html,body{
 background-color: #e9e9e9;	
 }
 body{padding-top: 50px;}
+.wrapper{overflow: hidden;width: 100%;}
 a,a:hover{text-decoration:none}
 .pos-r{position:relative}
 .img-hover{position:absolute;top: 0;left: 0;width: 100%;text-align: center;opacity:0;transition:all ease-in-out .5s; cursor:pointer}
@@ -198,6 +199,7 @@ background-size:contain;}
     white-space: nowrap;
 }
 .myinfo .dl-horizontal dd{margin-left: 60px;}
+.aboutboxtwo li .txtbox h3{font-size: 20px;}
 }
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width:992px) {
