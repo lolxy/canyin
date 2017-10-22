@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{
+background-color: #e9e9e9;	
+}
+body{padding-top: 50px;}
+a,a:hover{text-decoration:none}
+.pos-r{position:relative}
+.img-hover{position:absolute;top: 0;left: 0;width: 100%;text-align: center;opacity:0;transition:all ease-in-out .5s; cursor:pointer}
+.img-hover:hover{opacity:1;}
+h1,h2,h3{margin: 0;padding: 0;margin: 10px auto;}
+.none-padding {
+    padding: 0 !important;
+}
+
+.none-padding-left {
+    padding-left: 0 !important;
+}
+
+.none-padding-right {
+    padding-right: 0 !important;
+}
+
+.none-padding-bottom {
+    padding-bottom: 0 !important;
+}
+
+.none-padding-top {
+    padding-top: 0 !important;
+}
+
+.mt-20{
+	margin-top: 20px !important;
+}
+
+.mb-20{
+	margin-bottom: 20px !important;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.img-responsive{display:inline !important;}
+
+.navbar{
+		margin-bottom: 0;
+	}
+	
+.navbar-brand{
+	padding: 0;	
+	width: 110px;
+}
+
+/*轮播图*/
+.swiper-pagination-bullet-active {
+    background: #ffffff;
+}
+
+.swiper-pagination-bullet{
+	background: #999999;	
+	cursor:pointer
+}
+
+/*三大品牌*/
+.htit{
+width: 100%;
+height: 65px;	
+background-size:140%;
+background-position:center center;
+background-repeat:no-repeat;
+}
+.htit1{
+	background-image: url(../images/htit1.png);	
+}
+
+.recombox{
+	text-align: center;	
+}
+
+.recombox .text-center img{
+	display:inline
+}
+
+.recombox h3{
+	font-size: 14px;
+	color:#1c1c1c;	
+	min-height:30px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+/*公司简介*/
+.aboutus,.qiyelinianbox{
+background-color: #0c0c0c;	
+}
+.htit2{
+	background-image: url(../images/htit2.png);	
+}
+.description p{
+text-align: center;
+color:#ffffff;
+font-size: 14px;
+font-weight: bold;
+line-height: 24px;
+}
+
+.brandbox>div{margin-bottom: 20px;text-align: center;}
+.brandbox p{font-size: 14px;color:#ffffff;font-weight: bold;line-height: 24px;}
+.brandbox .brandtit{margin-top: 10px;margin-bottom: 10px;}
+
+.jmbtns{width: 155px;height: 48px;border: 1px solid #fefefe;line-height: 48px;text-align: center;color:#fefefe;display:block;font-weight: bold;margin: 30px auto 40px;transition:all ease-in-out .5s;}
+.jmbtns:hover{color:#0c0c0c;background-color: #fefefe;text-decoration:none}
+
+/*新闻资讯*/
+.bgfff{background-color: #fff;}
+.htit3{
+	background-image: url(../images/htit3.png);	
+}
+.newlistbox{background-color: #fff;overflow: hidden;padding: 20px;}
+.new-heading{margin-bottom: 10px;overflow: hidden;}
+.new-heading h2{margin: 0;font-size: 14px;font-weight: bold;float: left;height: 30px;line-height: 30px;}
+.new-heading .more{float: right;display:block;background: url(../images/more.png) center center no-repeat;width: 70px;height: 30px;}
+.new-list{overflow: hidden;}
+.new-list li{position:relative;height: 44px;overflow: hidden;border-bottom: 1px dashed #b3b3b3;line-height: 44px;font-size: 14px;}
+.new-list li a{display:block;margin-right: 100px;color:#1c1c1c;}
+.new-list li a:hover{color:#de7c90;}
+.new-list li span{display:block;position:absolute;top: 0;right: 0;text-align:right;}
+
+/*联系我们*/
+.contactus{
+background: url(../images/mapbg.png) center center no-repeat;
+background-size:cover	
+}
+.htit4{
+	background-image: url(../images/htit4.png);	
+}
+.map-canvas{height: 200px;margin-bottom: 30px;}
+.about-map-canvas{height: 150px;}
+.telbox{margin-bottom: 40px;line-height: 30px;color:#fefefe;font-weight: bold;}
+.telbox>div{overflow: hidden;position:relative}
+.telbox i{width: 24px;height: 24px;display:block;position:absolute;top: 0;left: 0;margin: 3px;}
+.telicon{background: url(../images/telicon.png) center center no-repeat;
+background-size:contain;}
+.dwicon{background: url(../images/dwicon.png) center center no-repeat;
+background-size:contain;}
+.telbox span{word-break:break-all;display:block;margin-left: 30px;line-height: 30px;}
+
+.footer{height: 40px;color:#fefefe;background-color: #434343;text-align: center;line-height: 40px;overflow: hidden;}
+
+/*关于我们页面*/
+.aboutboxone{padding: 40px 0;}
+.aboutboxone .content{padding: 10px;}
+.aboutboxone .content p{text-indent:2em;line-height: 24px;}
+
+.aboutboxtwo{background-color: #0c0c0c;padding-bottom: 40px;}
+.abouthtit2{background-image: url(../images/about_tit2.png);}
+.abouthtit3{background-image: url(../images/about_tit3.png);}
+.abouthtit4{background-image: url(../images/about_tit4.png);}
+.abouthtit5{background-image: url(../images/about_tit5.png);}
+
+.teamlist{padding:0 30px;}
+.aboutboxtwo li{overflow: hidden;padding: 0 0px;}
+.aboutboxtwo li .box{overflow: hidden;position:relative;margin: 10px;}
+.aboutboxtwo li .imgbox{margin-left: -150px;}
+.aboutboxtwo li .txtbox{background-color:rgba(0,0,0,.5);position:absolute;left:0;top: 0;transform:scale(0) rotate(180deg);color:#ffffff;width: 100%;height: 100%;padding:20px;transition:all ease-in-out .5s;cursor:pointer;}
+.aboutboxtwo li:hover .txtbox{transform:scale(1) rotate(0deg)}
+.aboutboxtwo li .txtbox h3{font-size: 30px;font-weight: bold;}
+.aboutboxtwo li .txtbox p{font-size: 14px;line-height: 22px;}
+
+.qiyelinianbox .recombox h3{min-height:auto;color:#ffffff;}
+.qiyelinianbox  p{color:#ffffff;line-height: 25px;}
+.qiyelinianbox,.about_contactus{padding-bottom: 40px;}
+.myinfo .dl-horizontal{margin-bottom: 0;}
+.myinfo .dl-horizontal dt{width: 90px;}
+.myinfo .dl-horizontal dd{margin-left: 100px;}
+.myinfo .dl-horizontal dt,.myinfo .dl-horizontal dd{font-size: 14px;color:#0c0c0c;font-weight: 400;height: 30px;line-height: 30px;}
+@media (max-width:767px) {
+.aboutboxone{padding: 0px;}
+.aboutboxtwo{padding-bottom: 20px;}
+
+.teamlist{padding:0 0px;}
+.aboutboxtwo li{overflow: hidden;padding: 0 0px;}
+.aboutboxtwo li .imgbox{margin-left: 0px;text-align: center;}
+.aboutboxtwo li .imgbox img{max-width:100%;}
+.aboutboxtwo li .txtbox{background:none;position:static;transform:scale(1);color:#ffffff;width: 100%;height: 100%;padding:20px;cursor:pointer;text-align: center;}
+.qiyelinianbox,.about_contactus{padding-bottom:0px;}
+.myinfo{margin: 10px auto;}
+.myinfo .dl-horizontal dt {
+    float: left;
+    width: 50px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.myinfo .dl-horizontal dd{margin-left: 60px;}
+}
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width:992px) {
+	body{padding-top: 100px;}
+	h1,h2,h3{margin: 20px auto;}
+	/*公共头部*/
+	.navbar{
+		min-height:100px;	
+		margin-bottom: 0;
+	}
+	
+	.navbar-brand{
+		padding: 0;	
+		width: 220px;
+	}
+	
+	.navbar-nav>li>a{
+		line-height: 70px;	
+		float: left;
+		font-weight: bold;
+	}
+	
+	.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:hover{
+		color:#de7c90;
+	}
+	
+	.navbar-nav>li{
+		overflow: hidden;	
+	}
+	
+	.navbar-nav>li:after{
+		content:"";
+		width: 30px;
+		height: 30px;
+		background:url("../images/menu_line.png");
+		display:inline-block;
+		vertical-align: top;
+		float: right;	
+		margin-top: 35px;
+	}
+	
+	.navbar-nav>li:last-child:after{
+		display:none;	
+	}
+	
+	.htit{
+	height: 130px;	
+	background-size:100%
+	}
+	
+	.recombox h3{
+	font-size: 18px;
+	min-height:60px;
+	}
+	
+	.brandbox .brandtit{margin-top: 20px;margin-bottom: 10px;}
+	.jmbtns{width: 310px;height: 96px;line-height: 96px;margin: 60px auto 80px;font-size: 24px;}
+	
+.newsbox{margin-bottom: 80px;	}
+.new-heading{margin-bottom: 20px;}
+.newlistbox{padding:40px 45px 20px;}
+.map-canvas{height: 400px;margin-bottom: 60px;}
+.about-map-canvas{height: 300px;}
+.telbox{margin-bottom: 80px;}
+.footer{height: 80px;line-height: 80px;}
+
+/*关于我们页面*/
+.aboutboxone{padding: 80px 0;}
+.aboutboxtwo,.qiyelinianbox,.about_contactus{padding-bottom: 80px;}
+
+.teamlist{padding:0 70px;}
+.aboutboxtwo li{overflow: hidden;padding: 0 20px;}
+.aboutboxtwo li .box{overflow: hidden;transform:skew(-10deg);position:relative;margin: 10px;}
+.aboutboxtwo li .imgbox{transform:skew(10deg);margin-left: -130px;}
+.aboutboxtwo li .txtbox{background-color:rgba(0,0,0,.5);position:absolute;left:-12%;top: 0;transform:scale(0) skew(0deg) rotate(180deg);color:#ffffff;width: 130%;height: 100%;padding:10px 30%;transition:all ease-in-out .5s;cursor:pointer;}
+.aboutboxtwo li:hover .txtbox{transform:scale(1) skew(10deg) rotate(0deg)}
+.aboutboxtwo li .txtbox h3{font-size: 30px;font-weight: bold;}
+.aboutboxtwo li .txtbox p{font-size: 14px;line-height: 22px;}
+.lichengbox{width: 1200px;padding-bottom: 80px;}
+.myinfo .dl-horizontal dt,.myinfo .dl-horizontal dd{margin-bottom: 20px;font-size: 24px;height: 40px;line-height: 40px;}
+}
