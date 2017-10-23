@@ -166,6 +166,9 @@ background-size:contain;}
 .jointit3{background-image: url(../images/zs_tit3.png);}
 .jointit4{background-image: url(../images/zs_tit4.png);}
 .jointit5{background-image: url(../images/zs_tit5.png);}
+.brandtit1{background-image: url(../images/brand_tit1.png);}
+.brandtit2{background-image: url(../images/brand_tit2.png);}
+.brandtit3{background-image: url(../images/brand_tit3.png);}
 
 .teamlist{padding:0 30px;}
 .aboutboxtwo li{overflow: hidden;padding: 0 0px;}
@@ -226,6 +229,15 @@ opacity:1;
 .jmtjlist .icobox:hover{background-color: #e26e6e;}
 .jmtjlist .icobox:hover i{transform:rotate(-45deg) scale(1.1)}
 .jmtjlist .caption{padding: 10px;text-align: center;font-size: 14px;color:#f3f9f3;line-height: 24px;}
+
+/*品牌页面*/
+.brand-main-box{padding: 40px 0;}
+.brand-main-box .caption{line-height: 24px;}
+.brand_product{background-color: #0c0c0c;padding-bottom: 40px;}
+.brand_product .cplist{margin-top: 20px;}
+.brand_product .cplist .content{color:#fefefe;padding: 35px;}
+.brand_product .cplist .content h3{font-size: 16px;font-weight: 600;margin: 15px auto;}
+.brand_product .cplist p{line-height: 30px;margin-top: 40px;}
 @media (max-width:767px) {
 .aboutboxone{padding: 0px;}
 .aboutboxtwo,.joinboxthree{padding-bottom: 20px;}
@@ -258,6 +270,11 @@ opacity:1;
 .htit{	
 background-size:250%;
 }
+.brand_product{padding-bottom: 10px;}
+.brand_product .cplist .content{margin-top:20px;padding: 10px;}
+.brand_product .cplist .content h3{margin: 0px auto;}
+.brand_product .cplist p{margin-top:10px;}
+.brand_product .cplist{margin-top: 0px;}
 }
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width:992px) {
@@ -351,4 +368,11 @@ background-size:250%;
 .jmtjlist .icobox{width: 150px;height: 150px;}
 .jmtjlist .caption{padding: 10px;font-size: 18px;line-height: 30px;}
 .joinboxthree{padding-bottom: 80px;}
+
+.brand-main-box{padding: 80px 0;}
+.brand-main-box .caption{font-size: 24px;line-height: 36px;}
+.brand_product{padding-bottom: 80px;}
+.brand_product .cplist .content{padding: 80px;}
+.brand_product .cplist .content h3{font-size: 24px;margin: 30px auto;}
+.brand_product .cplist .content p{font-size: 18px;margin-top: 80px;}
 }
