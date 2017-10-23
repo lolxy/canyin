@@ -69,7 +69,7 @@ h1,h2,h3{margin: 0;padding: 0;margin: 10px auto;}
 .htit{
 width: 100%;
 height: 65px;	
-background-size:140%;
+background-size:150%;
 background-position:center center;
 background-repeat:no-repeat;
 }
@@ -153,14 +153,19 @@ background-size:contain;}
 
 /*关于我们页面*/
 .aboutboxone{padding: 40px 0;}
+.joinboxthree{padding-bottom: 40px;}
 .aboutboxone .content{padding: 10px;}
 .aboutboxone .content p{text-indent:2em;line-height: 24px;}
 
-.aboutboxtwo{background-color: #0c0c0c;padding-bottom: 40px;}
+.aboutboxtwo,.joinboxtwo{background-color: #0c0c0c;padding-bottom: 40px;}
 .abouthtit2{background-image: url(../images/about_tit2.png);}
 .abouthtit3{background-image: url(../images/about_tit3.png);}
 .abouthtit4{background-image: url(../images/about_tit4.png);}
 .abouthtit5{background-image: url(../images/about_tit5.png);}
+.jointit2{background-image: url(../images/zs_tit2.png);}
+.jointit3{background-image: url(../images/zs_tit3.png);}
+.jointit4{background-image: url(../images/zs_tit4.png);}
+.jointit5{background-image: url(../images/zs_tit5.png);}
 
 .teamlist{padding:0 30px;}
 .aboutboxtwo li{overflow: hidden;padding: 0 0px;}
@@ -178,9 +183,52 @@ background-size:contain;}
 .myinfo .dl-horizontal dt{width: 90px;}
 .myinfo .dl-horizontal dd{margin-left: 100px;}
 .myinfo .dl-horizontal dt,.myinfo .dl-horizontal dd{font-size: 14px;color:#0c0c0c;font-weight: 400;height: 30px;line-height: 30px;}
+
+.companyinfo{padding: 40px 0px;overflow: hidden;}
+.companyinfo .picbox{position:relative;width: 175px;height: 180px;margin: 0 auto;}
+.companyinfo .picbox .pic1,.companyinfo .picbox .pic2{position:absolute;}
+.companyinfo .picbox img{max-height:100%}
+.companyinfo .picbox .pic1{width: 110px;height: 110px;overflow: hidden;z-index:1;top: 0;right: 0;background-color: #fff;padding: 10px;}
+.companyinfo .picbox .pic2{width: 150px;height: 150px;overflow: hidden;bottom: 0;left: 0;}
+.companyinfo .tit{margin:0px auto;width: 100%;height:65px;background: url(../images/zs_tit1.png) center center no-repeat;background-size:cover}
+.companyinfo .content{padding: 20px;}
+.companyinfo .content p{font-weight: bold;color:#202020;font-size: 14px;text-align: center;}
+
+/*加入我们*/
+.joinboxtwo .jmlist{padding: 40px 0;}
+.joinboxtwo .jmlist li{
+overflow: hidden;	
+text-align: center;
+}
+.joinboxtwo .jmlist li .box{
+width: 100%;
+position:relative;
+max-width:328px;
+overflow: hidden;	
+}
+.joinboxtwo .jmlist li .txtbox{
+position:absolute;
+top: 0;
+left: 0;	
+opacity:0;
+transition:all ease-in-out 0.5s;
+}
+.joinboxtwo .jmlist li:hover .txtbox{
+opacity:1;	
+}
+.culist p{padding: 42px;font-size: 16px;color:#0c0c0c;font-weight: 400;line-height: 24px;}
+.p-left{float: left;}
+.p-right{float: right;}
+.culist .tbox{width: 60px;height: 60px;position:absolute;top: 50%;left: 50%;margin-top: -30px;margin-left: -30px;}
+.culist>.row{margin-bottom: 30px;}
+.jmtjlist .icobox{width: 105px;height: 105px;text-align: center;margin:40px auto;background-color: #434343;transform:rotate(45deg);transition:all ease-in-out .8s;}
+.jmtjlist .icobox i{display:block;width: 100%;height: 100%;transform:rotate(-45deg);transition:all ease-in-out .8s;}
+.jmtjlist .icobox:hover{background-color: #e26e6e;}
+.jmtjlist .icobox:hover i{transform:rotate(-45deg) scale(1.1)}
+.jmtjlist .caption{padding: 10px;text-align: center;font-size: 14px;color:#f3f9f3;line-height: 24px;}
 @media (max-width:767px) {
 .aboutboxone{padding: 0px;}
-.aboutboxtwo{padding-bottom: 20px;}
+.aboutboxtwo,.joinboxthree{padding-bottom: 20px;}
 
 .teamlist{padding:0 0px;}
 .aboutboxtwo li{overflow: hidden;padding: 0 0px;}
@@ -200,6 +248,16 @@ background-size:contain;}
 }
 .myinfo .dl-horizontal dd{margin-left: 60px;}
 .aboutboxtwo li .txtbox h3{font-size: 20px;}
+.companyinfo .tit{margin-top: 10px;margin-bottom: 0;background-position:25px center}
+.joinboxtwo .jmlist{padding: 10px 0;}
+.joinboxtwo .jmlist li .txtbox{opacity:1;}
+.p-left,.p-right{float: none;}
+.culist>.row{margin-bottom: 0px;}
+.culist p{padding: 10px;}
+.companyinfo{padding: 20px 0 0;}
+.htit{	
+background-size:250%;
+}
 }
 /* 大屏幕（大桌面显示器，大于等于 1200px） */
 @media (min-width:992px) {
@@ -224,6 +282,7 @@ background-size:contain;}
 	
 	.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:hover{
 		color:#de7c90;
+		background: none;
 	}
 	
 	.navbar-nav>li{
@@ -280,4 +339,16 @@ background-size:contain;}
 .aboutboxtwo li .txtbox p{font-size: 14px;line-height: 22px;}
 .lichengbox{width: 1200px;padding-bottom: 80px;}
 .myinfo .dl-horizontal dt,.myinfo .dl-horizontal dd{margin-bottom: 20px;font-size: 24px;height: 40px;line-height: 40px;}
+
+.companyinfo{padding: 80px 0px;}
+.companyinfo .picbox{width: 345px;height: 360px;}
+.companyinfo .picbox .pic1{width: 220px;height: 220px;}
+.companyinfo .picbox .pic2{width: 295px;height: 295px;}
+.companyinfo .tit{margin: 40px auto;height: 130px;}
+.culist p{padding: 84px;font-size: 24px;line-height: 40px;}
+.culist .tbox{width: 122px;height: 122px;margin-top: -61px;margin-left: -61px;}
+.culist>.row{margin-bottom: 60px;}
+.jmtjlist .icobox{width: 150px;height: 150px;}
+.jmtjlist .caption{padding: 10px;font-size: 18px;line-height: 30px;}
+.joinboxthree{padding-bottom: 80px;}
 }
