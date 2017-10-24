@@ -181,7 +181,7 @@ background-size:contain;}
 
 .qiyelinianbox .recombox h3{min-height:auto;color:#ffffff;}
 .qiyelinianbox  p{color:#ffffff;line-height: 25px;}
-.qiyelinianbox,.about_contactus{padding-bottom: 40px;}
+.qiyelinianbox,.about_contactus,.brand-xx-box{padding-bottom: 40px;}
 .myinfo .dl-horizontal{margin-bottom: 0;}
 .myinfo .dl-horizontal dt{width: 90px;}
 .myinfo .dl-horizontal dd{margin-left: 100px;}
@@ -238,9 +238,23 @@ opacity:1;
 .brand_product .cplist .content{color:#fefefe;padding: 35px;}
 .brand_product .cplist .content h3{font-size: 16px;font-weight: 600;margin: 15px auto;}
 .brand_product .cplist p{line-height: 30px;margin-top: 40px;}
+
+.tabs{height: 45px;overflow: hidden;margin-bottom: 30px;}
+.tabs li{text-align: center;color:#ffffff;background-color: #434343;line-height: 45px;cursor:pointer}
+.tabs li.active{background-color: #de7c90;}
+.mdfbbox{
+background: url(../images/brand_concat_bg.png) center center no-repeat;
+background-size:cover	
+}
+.mdfbbox .telbox p{text-align: center;margin-bottom: 10px;font-weight: 400;}
+.contactStyle{width: 320px;margin: 0 auto;}
+.contactStyle a{display:block;height:36px;width: 36px;background-position:center center;background-repeat:no-repeat;background-size:contain;margin: 0 auto;}
+.qqicon{background-image: url(../images/qqicon.png)}
+.wxicon{background-image: url(../images/wxicon.png)}
+.wbicon{background-image: url(../images/wbicon.png)}
 @media (max-width:767px) {
 .aboutboxone{padding: 0px;}
-.aboutboxtwo,.joinboxthree{padding-bottom: 20px;}
+.aboutboxtwo,.joinboxthree,.brand-xx-box{padding-bottom: 20px;}
 
 .teamlist{padding:0 0px;}
 .aboutboxtwo li{overflow: hidden;padding: 0 0px;}
@@ -371,8 +385,13 @@ background-size:250%;
 
 .brand-main-box{padding: 80px 0;}
 .brand-main-box .caption{font-size: 24px;line-height: 36px;}
-.brand_product{padding-bottom: 80px;}
+.brand_product,.brand-xx-box{padding-bottom: 80px;}
 .brand_product .cplist .content{padding: 80px;}
 .brand_product .cplist .content h3{font-size: 24px;margin: 30px auto;}
 .brand_product .cplist .content p{font-size: 18px;margin-top: 80px;}
+
+.tabs{height: 90px;margin-bottom: 60px;}
+.mdfbbox .telbox p{font-size: 24px;margin-bottom: 30px;}
+.tabs li{font-size: 24px;line-height: 90px;}
+.contactStyle a{height:50px;width: 50px;}
 }
