@@ -14,6 +14,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .mt-20{margin-top:20px!important}
 .mb-20{margin-bottom:20px!important}
 .text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.text-overflow-3{overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
 .img-responsive{display:inline!important}
 .navbar{margin-bottom:0}
 .navbar-brand{padding:0;width:110px}
@@ -56,6 +57,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .footer{height:40px;color:#fefefe;background-color:#434343;text-align:center;line-height:40px;overflow:hidden}
 .aboutboxone{padding:40px 0}
 .joinboxthree{padding-bottom:40px}
+.newswrapperbox{padding-bottom: 20px;}
 .aboutboxone .content{padding:10px}
 .aboutboxone .content p{text-indent:2em;line-height:24px}
 .aboutboxtwo,.joinboxtwo{background-color:#0c0c0c;padding-bottom:40px}
@@ -126,6 +128,24 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .qqicon{background-image:url(../images/qqicon.png)}
 .wxicon{background-image:url(../images/wxicon.png)}
 .wbicon{background-image:url(../images/wbicon.png)}
+
+.categorybox{background-color: #0c0c0c;height: 40px;overflow: hidden;}
+.categorybox .nav>li>a{padding: 5px 10px;margin: 5px;color:#ffffff;}
+.categorybox .nav-pills>li.active>a,.categorybox .nav-pills>li.active>a:focus,.categorybox .nav-pills>li.active>a:hover,.categorybox .nav>li>a:focus,.categorybox .nav>li>a:hover{background-color:#de7c90}
+.categorybox .tells{line-height: 40px;color:#ffffff;}
+.breadcrumb{background: none;margin: 7px auto;}
+.breadcrumb li a{color:#0c0c0c;}
+.breadcrumb li.active{color:#de7c90;}
+.contentbox h2{margin: 0;margin-bottom: 10px;font-size: 18px;color:#0c0c0c;font-weight: bold;}
+.contentbox .fbtime{display:block;color:#0c0c0c;font-size: 14px;margin-bottom: 10px;}
+.htmlbox{color:#434343;line-height: 24px;text-indent:2em;}
+.recomlist li{position:relative;padding: 5px;overflow: hidden;height: 100px;}
+.recomlist li .picbox{width: 140px;height: 90px;background-color: #eeeeee;overflow: hidden;position:absolute;top: 5px;left: 5px;}
+.recomlist li .tbox{margin-left: 150px;}
+.recomlist li .tbox .theader{color:#434343;overflow: hidden;}
+.recomlist li .tbox .tbody{padding-top: 10px;}
+.recomlist li .tbox .tbody a{font-weight: bold;color:#0c0c0c;line-height: 20px;}
+.recomlist li .tbox .tbody a:hover{color:#de7c90}
 @media (max-width:767px){.aboutboxone{padding:0}
 .aboutboxtwo,.brand-xx-box,.joinboxthree{padding-bottom:20px}
 .teamlist{padding:0 0}
@@ -133,7 +153,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .aboutboxtwo li .imgbox{margin-left:0;text-align:center}
 .aboutboxtwo li .imgbox img{max-width:100%}
 .aboutboxtwo li .txtbox{background:0 0;position:static;transform:scale(1);color:#fff;width:100%;height:100%;padding:20px;cursor:pointer;text-align:center}
-.about_contactus,.qiyelinianbox{padding-bottom:0}
+.about_contactus,.qiyelinianbox,.newswrapperbox{padding-bottom:0}
 .myinfo{margin:10px auto}
 .myinfo .dl-horizontal dt{float:left;width:50px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}
 .myinfo .dl-horizontal dd{margin-left:60px}
@@ -205,4 +225,19 @@ h1,h2,h3{margin:20px auto}
 .mdfbbox .telbox p{font-size:24px;margin-bottom:30px}
 .tabs li{font-size:24px;line-height:90px}
 .contactStyle a{height:50px;width:50px}
+
+.newswrapperbox{padding-bottom: 40px;}
+.categorybox{height: 60px;}
+.categorybox .nav>li>a{padding: 5px 15px;margin:13px;font-size: 18px;}
+.categorybox .tells{line-height: 60px;font-size: 18px;}
+.breadcrumb{margin: 18px auto;font-size: 18px;}
+.contentbox h2{margin-bottom:20px;font-size: 36px;}
+.contentbox .fbtime{margin-bottom: 20px;}
+.htmlbox{font-size: 18px;line-height: 30px;}
+
+.recomlist li{height: 145px;}
+.recomlist li .picbox{width: 210px;height: 135px;}
+.recomlist li .tbox{margin-left: 220px;}
+.recomlist li .tbox .theader{font-size: 18px;}
+.recomlist li .tbox .tbody a{font-size: 20px;line-height: 34px;}
 }
