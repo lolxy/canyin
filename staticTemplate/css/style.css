@@ -31,16 +31,16 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .brandbox>div{margin-bottom:20px;text-align:center}
 .brandbox p{font-size:14px;color:#fff;font-weight:700;line-height:24px}
 .brandbox .brandtit{margin-top:10px;margin-bottom:10px}
-.jmbtns{width:155px;height:48px;border:1px solid #fefefe;line-height:48px;text-align:center;color:#fefefe;display:block;font-weight:700;margin:30px auto 40px;transition:all ease-in-out .5s}
-.jmbtns:hover{color:#0c0c0c;background-color:#fefefe;text-decoration:none}
+.aboutus a.jmbtns{width:155px;height:48px;border:1px solid #fefefe;line-height:48px;text-align:center;color:#fefefe;display:block;font-weight:700;margin:30px auto 40px;transition:all ease-in-out .5s;text-decoration:none}
+.aboutus a.jmbtns:hover{color:#0c0c0c;background-color:#fefefe;}
 .bgfff{background-color:#fff}
 .htit3{background-image:url(../images/htit3.png)}
-.newlistbox{background-color:#fff;overflow:hidden;padding:20px}
+.newlistbox{background-color:#fff;overflow:hidden;padding:14px 20px}
 .new-heading{margin-bottom:10px;overflow:hidden}
 .new-heading h2{margin:0;font-size:14px;font-weight:700;float:left;height:30px;line-height:30px}
 .new-heading .more{float:right;display:block;background:url(../images/more.png) center center no-repeat;width:70px;height:30px}
 .new-list{overflow:hidden}
-.new-list li{position:relative;height:44px;overflow:hidden;border-bottom:1px dashed #b3b3b3;line-height:44px;font-size:14px}
+.new-list li{position:relative;height:32px;overflow:hidden;border-bottom:1px dashed #b3b3b3;line-height:32px;font-size:12px}
 .new-list li a{display:block;margin-right:100px;color:#1c1c1c}
 .new-list li a:hover{color:#de7c90}
 .new-list li span{display:block;position:absolute;top:0;right:0;text-align:right}
@@ -56,7 +56,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .telbox span{word-break:break-all;display:block;margin-left:30px;line-height:30px}
 .footer{height:40px;color:#fefefe;background-color:#434343;text-align:center;line-height:40px;overflow:hidden}
 .aboutboxone{padding:40px 0}
-.joinboxthree{padding-bottom:40px}
+.joinboxthree,.newsbox{padding-bottom:40px}
 .newswrapperbox{padding-bottom: 20px;}
 .aboutboxone .content{padding:10px}
 .aboutboxone .content p{text-indent:2em;line-height:24px}
@@ -134,7 +134,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .categorybox .nav-pills>li.active>a,.categorybox .nav-pills>li.active>a:focus,.categorybox .nav-pills>li.active>a:hover,.categorybox .nav>li>a:focus,.categorybox .nav>li>a:hover{background-color:#de7c90}
 .categorybox .tells{line-height: 40px;color:#ffffff;}
 .breadcrumb{background: none;margin: 7px auto;}
-.breadcrumb li a{color:#0c0c0c;}
+.breadcrumb li a{color:#0c0c0c;text-decoration:none;}
 .breadcrumb li.active{color:#de7c90;}
 .contentbox h2{margin: 0;margin-bottom: 10px;font-size: 18px;color:#0c0c0c;font-weight: bold;}
 .contentbox .fbtime{display:block;color:#0c0c0c;font-size: 14px;margin-bottom: 10px;}
@@ -146,14 +146,35 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .recomlist li .tbox .tbody{padding-top: 10px;}
 .recomlist li .tbox .tbody a{font-weight: bold;color:#0c0c0c;line-height: 20px;}
 .recomlist li .tbox .tbody a:hover{color:#de7c90}
-@media (max-width:767px){.aboutboxone{padding:0}
+
+/*列表页*/
+.newslistbox{overflow: hidden;}
+.newslistbox li{border-bottom:1px solid #e2e2e2;padding-bottom: 15px;margin-bottom: 15px;color:#434343;}
+.newslistbox li a{color:#434343;}
+.newslistbox li a:hover h3,.newslistbox li a:hover .datebox{color:#de7c90}
+.newslistbox li:last-child{border-bottom: none;margin-bottom: 0;}
+.newslistbox li .baseinfo{position:relative;padding-right: 10px;}
+.newslistbox li .baseinfo .datebox{position:absolute;width: 130px;padding: 20px 15px;}
+.newslistbox li .baseinfo .datebox span{display:block;text-align: center;}
+.newslistbox li .baseinfo .datebox .day{font-size: 40px;border-bottom: 1px solid #e2e2e2;line-height: 50px;}
+.newslistbox li .baseinfo .datebox .date{font-size: 16px;line-height: 30px;margin-top: 10px;}
+.newslistbox li .baseinfo .thumbnailbox{margin-left: 130px;}
+.newslistbox li h3{font-size: 18px;color:#0c0c0c;line-height:22px;margin: 0;margin-bottom:10px;}
+.newslistbox li .content{line-height: 20px;}
+.newslistbox li .otherinfo{margin-top: 10px;border-top: 1px solid #e2e2e2;padding-top: 10px;}
+.newslistbox li .otherinfo span{margin-right: 15px;line-height: 20px;}
+.newslistbox li .icon{display:inline-block;width: 20px;height: 20px;background-size:contain;background-position:center center;background-repeat:no-repeat;vertical-align: top;margin-right: 10px;}
+.icon-date{background-image:url(../images/timeicon.png)}
+.icon-hits{background-image:url(../images/viewicon.png)}
+@media (max-width:767px){
+.aboutboxone{padding:0}
 .aboutboxtwo,.brand-xx-box,.joinboxthree{padding-bottom:20px}
 .teamlist{padding:0 0}
 .aboutboxtwo li{overflow:hidden;padding:0 0}
 .aboutboxtwo li .imgbox{margin-left:0;text-align:center}
 .aboutboxtwo li .imgbox img{max-width:100%}
 .aboutboxtwo li .txtbox{background:0 0;position:static;transform:scale(1);color:#fff;width:100%;height:100%;padding:20px;cursor:pointer;text-align:center}
-.about_contactus,.qiyelinianbox,.newswrapperbox{padding-bottom:0}
+.about_contactus,.qiyelinianbox,.newswrapperbox,.newsbox{padding-bottom:0}
 .myinfo{margin:10px auto}
 .myinfo .dl-horizontal dt{float:left;width:50px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}
 .myinfo .dl-horizontal dd{margin-left:60px}
@@ -171,6 +192,8 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .brand_product .cplist .content h3{margin:0 auto}
 .brand_product .cplist p{margin-top:10px}
 .brand_product .cplist{margin-top:0}
+.newslistbox li .baseinfo{padding-right: 0;border: 1px solid #e2e2e2;border-bottom: none;}
+.newslistbox li .row .txtinfo{background-color: #fafafa;margin-bottom: 0;border:1px solid #e2e2e2;overflow: hidden;padding:10px 24px;box-sizing:border-box}
 }
 @media (min-width:992px){body{padding-top:100px}
 h1,h2,h3{margin:20px auto}
@@ -185,7 +208,6 @@ h1,h2,h3{margin:20px auto}
 .recombox h3{font-size:18px;min-height:60px}
 .brandbox .brandtit{margin-top:20px;margin-bottom:10px}
 .jmbtns{width:310px;height:96px;line-height:96px;margin:60px auto 80px;font-size:24px}
-.newsbox{margin-bottom:80px}
 .new-heading{margin-bottom:20px}
 .newlistbox{padding:40px 45px 20px}
 .map-canvas{height:400px;margin-bottom:60px}
@@ -202,6 +224,7 @@ h1,h2,h3{margin:20px auto}
 .aboutboxtwo li:hover .txtbox{transform:scale(1) skew(10deg) rotate(0)}
 .aboutboxtwo li .txtbox h3{font-size:30px;font-weight:700}
 .aboutboxtwo li .txtbox p{font-size:14px;line-height:22px}
+.new-list li{height:44px;line-height:44px;}
 .lichengbox{width:1200px;padding-bottom:80px}
 .myinfo .dl-horizontal dd,.myinfo .dl-horizontal dt{margin-bottom:20px;font-size:24px;height:40px;line-height:40px}
 .companyinfo{padding:80px 0}
@@ -214,7 +237,7 @@ h1,h2,h3{margin:20px auto}
 .culist>.row{margin-bottom:60px}
 .jmtjlist .icobox{width:150px;height:150px}
 .jmtjlist .caption{padding:10px;font-size:18px;line-height:30px}
-.joinboxthree{padding-bottom:80px}
+.joinboxthree,.newsbox{padding-bottom:80px}
 .brand-main-box{padding:80px 0}
 .brand-main-box .caption{font-size:24px;line-height:36px}
 .brand-xx-box,.brand_product{padding-bottom:80px}
@@ -240,4 +263,16 @@ h1,h2,h3{margin:20px auto}
 .recomlist li .tbox{margin-left: 220px;}
 .recomlist li .tbox .theader{font-size: 18px;}
 .recomlist li .tbox .tbody a{font-size: 20px;line-height: 34px;}
+
+.newslistbox li{padding-bottom: 30px;margin-bottom: 30px;}
+.newslistbox li .baseinfo{padding-right: 70px;}
+.newslistbox li .baseinfo .datebox{width: 170px;padding: 35px 20px;}
+.newslistbox li .baseinfo .datebox .day{font-size: 60px;line-height: 70px;}
+.newslistbox li .baseinfo .datebox .date{font-size: 24px;line-height: 40px;}
+.newslistbox li .baseinfo .thumbnailbox{margin-left: 170px;}
+.newslistbox li h3{font-size: 30px;line-height: 30px;margin-bottom: 30px;}
+.newslistbox li .content{line-height: 24px;}
+.newslistbox li .otherinfo{margin-top: 20px;padding-top: 20px;}
+.newslistbox li .otherinfo span{margin-right: 15px;line-height: 30px;}
+.newslistbox li .icon{width: 30px;height: 30px;}
 }
