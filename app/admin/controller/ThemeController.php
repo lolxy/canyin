@@ -100,8 +100,8 @@ class ThemeController extends AdminBaseController
     public function uninstall()
     {
         $theme      = $this->request->param('theme');
-        if ($theme == "simpleboot3" || config('cmf_default_theme') == $theme ){
-            $this->error("官方自带模板或当前使用中的模板不可以卸载");
+        if ($theme == config('cmf_default_theme')){
+            $this->error("当前使用中的模板不可以卸载");
         }
 
         $themeModel = new ThemeModel();
