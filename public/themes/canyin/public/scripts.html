@@ -1,3 +1,10 @@
 <script src="__TMPL__/public/assets/js/jquery.min.js"></script>
 <script src="__TMPL__/public/assets/js/swiper.jquery.min.js"></script>
 <script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+<script>
+$("#main-menu a,#news-nav a").each(function(){
+    if ($(this)[0].href == String(window.location) && $(this).attr('href')!="") {
+    	$(this).parents("li").addClass("active");
+	}
+    });
+</script>

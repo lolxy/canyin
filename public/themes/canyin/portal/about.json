@@ -1,48 +1,138 @@
 {
     "name": "关于我们页面",
     "action": "portal/Page/index",
-    "description": "单页面模板文件",
-    "order": 10.0,
+    "description": "配置关于我们页面",
+    "order": 2.0,
     "more": {
         "widgets":{
-            "hottest_articles": {
-                "title": "热门文章",
+			"zheliyou":{
+				"title": "这里有",
                 "display": "1",
                 "vars": {
-                    "hottest_articles_category_id": {
-                        "title": "文章分类ID",
-                        "value": "",
-                        "type": "text",
-                        "dataSource": {
-                            "api": "portal/category/index",
-                            "multi": true
-                        },
-                        "placeholder": "请选择分类",
-                        "tip": "",
-                        "rule": {
-                            "require": true
-                        }
-                    }
+					"main_thumb": {
+						"title": "主图上传",
+						"value": "",
+						"type": "image",
+						"tip": ""
+					},
+					"description": {
+						"title": "说明文字",
+						"value": "",
+						"type": "textarea",
+						"tip": ""
+					}
                 }
-            },
-            "last_articles": {
-                "title": "最新发布",
+			},
+			"terms":{
+				"title": "团队",
                 "display": "1",
                 "vars": {
-                    "last_articles_category_id": {
-                        "title": "文章分类ID",
-                        "value": "",
-                        "type": "text",
-                        "dataSource": {
-                            "api": "portal/category/index",
-                            "multi": true
-                        },
-                        "placeholder": "请选择分类",
-                        "tip": "",
-                        "rule": {
-                            "require": true
-                        }
-                    }
+				  "itemarray": {
+					"title": "团队成员",
+					"value": [],
+					"type": "array",
+					"item": {
+						"title": {
+							"title": "姓名",
+							"value": "",
+							"type": "text"
+						},
+						"description": {
+							"title": "个人介绍",
+							"value": "",
+							"type": "textarea"
+						},
+						"thumb": {
+							"title": "品牌主图",
+							"value": "",
+							"type": "image"
+						}
+					},
+					"tip": ""
+                   }	
+				}
+			},
+			"linian":{
+				"title": "企业理念",
+                "display": "1",
+                "vars": {
+				  "linianarray": {
+					"title": "企业理念",
+					"value": [],
+					"type": "array",
+					"item": {
+						"title": {
+							"title": "标题",
+							"value": "",
+							"type": "text"
+						},
+						"description": {
+							"title": "理念介绍",
+							"value": "",
+							"type": "textarea"
+						},
+						"thumb": {
+							"title": "理念主图",
+							"value": "",
+							"type": "image"
+						}
+					},
+					"tip": ""
+				   }
+                }	
+			},
+			"licheng":{
+				"title": "历程设置",
+                "display": "1",	
+				"vars": {
+					"lichengimg": {
+						"title": "历程图片",
+						"value": "",
+						"type": "image",
+						"tip": ""
+					}
+                }
+			},
+			"contact": {
+                "title": "联系我们",
+                "display": "1",
+                "vars": {
+					"company_location": {
+						"title": "公司坐标",
+						"value": "",
+						"type": "location",
+						"tip": ""
+					},
+					"address": {
+						"title": "联系地址",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					},
+					"phone": {
+						"title": "联系电话",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					},
+					"qq": {
+						"title": "联系QQ",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					},
+					"weixin": {
+						"title": "联系微信",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					},
+					"email": {
+						"title": "联系邮箱",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					}
                 }
             }
         }

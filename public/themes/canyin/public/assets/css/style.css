@@ -160,12 +160,18 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .newslistbox li .baseinfo .datebox .date{font-size: 16px;line-height: 30px;margin-top: 10px;}
 .newslistbox li .baseinfo .thumbnailbox{margin-left: 130px;}
 .newslistbox li h3{font-size: 18px;color:#0c0c0c;line-height:22px;margin: 0;margin-bottom:10px;}
-.newslistbox li .content{line-height: 20px;}
+.newslistbox li .content{line-height: 20px;min-height:60px;}
 .newslistbox li .otherinfo{margin-top: 10px;border-top: 1px solid #e2e2e2;padding-top: 10px;}
 .newslistbox li .otherinfo span{margin-right: 15px;line-height: 20px;}
 .newslistbox li .icon{display:inline-block;width: 20px;height: 20px;background-size:contain;background-position:center center;background-repeat:no-repeat;vertical-align: top;margin-right: 10px;}
 .icon-date{background-image:url(../images/timeicon.png)}
 .icon-hits{background-image:url(../images/viewicon.png)}
+.paginationbox{text-align: center;}
+.pagination{margin: 10px auto;}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #080808;
+    border-color: #080808;
+}
 @media (max-width:767px){
 .aboutboxone{padding:0}
 .aboutboxtwo,.brand-xx-box,.joinboxthree{padding-bottom:20px}
@@ -271,7 +277,7 @@ h1,h2,h3{margin:20px auto}
 .newslistbox li .baseinfo .datebox .date{font-size: 24px;line-height: 40px;}
 .newslistbox li .baseinfo .thumbnailbox{margin-left: 170px;}
 .newslistbox li h3{font-size: 30px;line-height: 30px;margin-bottom: 30px;}
-.newslistbox li .content{line-height: 24px;}
+.newslistbox li .content{line-height: 24px;min-height:72px;}
 .newslistbox li .otherinfo{margin-top: 20px;padding-top: 20px;}
 .newslistbox li .otherinfo span{margin-right: 15px;line-height: 30px;}
 .newslistbox li .icon{width: 30px;height: 30px;}

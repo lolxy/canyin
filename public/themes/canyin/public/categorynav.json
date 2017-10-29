@@ -1,0 +1,17 @@
+{
+    "name": "新闻分类导航",
+    "action": "public/Config",
+    "description": "新闻分类导航配置文件",
+    "is_public": "1",
+    "order": 1.0,
+    "more": {
+        "vars": {
+			"contact": {
+                "title": "咨询热线",
+                "value": "",
+                "type": "text",
+                "tip": ""
+            }
+        }
+    }
+}

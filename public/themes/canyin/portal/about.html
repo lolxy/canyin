@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>首页 {$site_info.site_name|default=''}</title>
-    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
-    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <title>{$page.post_title}-{$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$page.post_keywords}"/>
+    <meta name="description" content="{$page.post_excerpt}">
     <include file="public@head"/>
     <hook name="before_head_end"/>
-		<style>
-		html,body{background-color: #fff;color:#434343;}
-		</style>
+	<style>
+    html,body{background-color: #fff;color:#434343;}
+    </style>
 </head>
 <body>
 <include file="public@nav"/>
 
 <div class="wrapper">
+	<widget name="zheliyou">
 	<div class="container aboutboxone">
     	<div class="row">
         	<div class="col-xs-12 col-md-6">
@@ -21,17 +22,18 @@
                 <img src="__TMPL__/public/assets/images/about_tit1.png" alt="" class="img-responsive"/>
                 </div>
                 <div class="content">
-                	<p>“这里有”，这个品牌创作的初衷是白话文的代言词，百度搜索高达1亿以上，是天然的超级大IP。“这里有意面”、“这里有西餐”、“去这里有”、“这里有XXX”这里有能与任何事物链接，与当下非常流行的互联网思维非常吻合，而团队看中“这里有”这个天然超级大IP让消费者对品牌的熟悉和认知改变。</p><p>
-“这里有”创立于2015年4月，最早是一家位于福州五四路上一个偏僻小巷里的绿色餐厅，经营以意大利面为主，沙拉，饭类，特色小吃为辅，倾心打造最地道的意式料理。这里有的核心团队人员均有五年以上与餐饮业相关的从业经验，秉持让“这里有，非常好吃的意面”的产品理念，将各自对美食、设计、营销、管理等方面的专长发挥到极致，专注于每个细节。目前“这里有”在福州拥有5家直营门店和百名员工，正处于飞速成长阶段，是一家具有良好发展和潜力的企业。</p>
+                	{:htmlspecialchars_decode($widget['vars']['description'])}
                 </div>
             </div>
 
             <div class="col-xs-12 col-md-6 text-center">
-            	<img src="__TMPL__/public/assets/images/about_recommond.png" alt="" class="img-responsive"/>
+            	<img src="{:cmf_get_image_url($widget['vars']['main_thumb'])}" alt="" class="img-responsive"/>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="terms">
     <div class="container-fluid aboutboxtwo">
     	<div class="container">
            	<div class="row">
@@ -42,46 +44,37 @@
 
             <div class="row teamlist">
                 <ul class="list-unstyled">
-                    <li class="col-sm-4 col-xs-12">
-                        <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/about_td1.jpg" alt="">
+                
+                <php>
+                $term_count = count($widget['vars']['itemarray']);
+                $rows = ceil($term_count/3);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*3;
+                        $terms = array_slice($widget['vars']['itemarray'],$first_row,3);
+                    </php>
+                    <foreach name="terms" item="vo">
+                        <li class="col-sm-4 col-xs-12">
+                            <div class="box">
+                                <div class="imgbox">
+                                    <img src="{:cmf_get_image_url($vo.thumb)}" alt="">
+                                </div>
+                                <div class="txtbox">
+                                    <h3>{$vo.title}</h3>
+                                    <p>{:htmlspecialchars_decode($vo.description)}</p>
+                                </div>
                             </div>
-                            <div class="txtbox">
-                                <h3>陈长生</h3>
-                                <p>这里有创始人兼产品总监<br>都说男人最帅的时候是在厨房<br>认真做饭的时候<br>而这个老头恰恰印证了这个话<br>十几年的西餐经验<br>曾当人日本星级餐厅厨师长<br>任何美味在他的手里都变得简单而美好</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-sm-4 col-xs-12">
-                        <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/about_td2.jpg" alt="">
-                            </div>
-                            <div class="txtbox">
-                                <h3>陈长生</h3>
-                                <p>这里有创始人兼产品总监<br>都说男人最帅的时候是在厨房<br>认真做饭的时候<br>而这个老头恰恰印证了这个话<br>十几年的西餐经验<br>曾当人日本星级餐厅厨师长<br>任何美味在他的手里都变得简单而美好</p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="col-sm-4 col-xs-12">
-                        <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/about_td3.jpg" alt="">
-                            </div>
-                            <div class="txtbox">
-                                <h3>陈长生</h3>
-                                <p>这里有创始人兼产品总监<br>都说男人最帅的时候是在厨房<br>认真做饭的时候<br>而这个老头恰恰印证了这个话<br>十几年的西餐经验<br>曾当人日本星级餐厅厨师长<br>任何美味在他的手里都变得简单而美好</p>
-                            </div>
-                        </div>
-                    </li>
+                    	</li>
+                    </foreach>
+                </for>
                 </ul>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="licheng">
     <div class="container lichengbox">
     	<div class="row">
             <h2 class="htit abouthtit3">
@@ -90,11 +83,13 @@
         </div>
 
     	<div class="row">
-        	<img src="__TMPL__/public/assets/images/about_licheng.png" alt="" class="img-responsive"/>
+        	<img src="{:cmf_get_image_url($widget['vars']['lichengimg'])}" alt="" class="img-responsive"/>
         </div>
     </div>
+    </widget>
 
     <!--企业理念-->
+    <widget name="linian">
     <div class="container-fulid qiyelinianbox">
         <div class="container">
             <div class="row">
@@ -103,56 +98,40 @@
                 </h2>
             </div>
             <div class="row">
-              <div class="col-xs-12 col-sm-4">
-                <div class="recombox">
-                  <div class="text-center">
-                  <img src="__TMPL__/public/assets/images/about_img1.png" alt="..." class="img-responsive"/>
-                  </div>
-                  <div class="caption">
-                    <h3>品牌-塑造文化</h3>
-                    <p>这里有始终将每项产品的品质放在第一位<br>
-                   	每一道繁琐的工序<br>
-                    每一次精雕细琢的烹调与摆盘<br>
-                    职位将最原汁原味的特色料理及文化品味体验带给每位顾客
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-4">
-                <div class="recombox">
-                  <div class="text-center">
-                  <img src="__TMPL__/public/assets/images/about_img2.png" alt="..." class="img-responsive"/>
-                  </div>
-                  <div class="caption">
-                    <h3>专业-成就卓越</h3>
-                    <p>
-                    我们以我们的专业，为每位客户提供最卓越的产品，为每位加盟商提供最安心、无忧的一站式科学管理服务
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-12 col-sm-4">
-                <div class="recombox">
-                  <div class="text-center">
-                  <img src="__TMPL__/public/assets/images/about_img3.png" alt="..." class="img-responsive"/>
-                  </div>
-                  <div class="caption">
-                    <h3>服务-彰显价值</h3>
-                    <p>晚上的服务是最好的宣传名片<br>
-这里有本着对每位客户认知、负责的态度<br>
-以至诚、感恩、热情的细节服务<br>
-彰显这里有品牌的文化及价值
-                    </p>
-                  </div>
-                </div>
-              </div>
+                <php>
+                $linian_count = count($widget['vars']['linianarray']);
+                $rows = ceil($linian_count/3);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*3;
+                        $linians = array_slice($widget['vars']['linianarray'],$first_row,3);
+                    </php>
+                    <foreach name="linians" item="vo">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="recombox">
+                              <div class="text-center">
+                              <img src="{:cmf_get_image_url($vo.thumb)}" alt="..." class="img-responsive"/>
+                              </div>
+                              <div class="caption">
+                                <h3>{$vo.title}</h3>
+                                <p>{:htmlspecialchars_decode($vo.description)}</p>
+                              </div>
+                            </div>
+                        </div>
+                    </foreach>
+                </for>
             </div>
         </div>
         </div>
+        </widget>
 
         <!--联系我们-->
+   <widget name="contact">
+ <php>
+$location=explode(',',$widget["vars"]["company_location"]);
+$location_str = '"'.$location[0].'", "'.$location[1].'"';
+</php>
 <div class="container-fulid about_contactus">
     <div class="container">
         <div class="row">
@@ -169,34 +148,35 @@
             	<div class="myinfo">
                     <dl class="dl-horizontal">
                         <dt>地址：</dt>
-                        <dd>福建省福州市xxxxxxxxxxx</dd>
+                        <dd>{$widget['vars']['address']}</dd>
                         <dt>QQ：</dt>
-                        <dd></dd>
+                        <dd>{$widget['vars']['qq']}</dd>
                         <dt>微信：</dt>
-                        <dd></dd>
+                        <dd>{$widget['vars']['weixin']}</dd>
                         <dt>邮箱：</dt>
-                        <dd></dd>
+                        <dd>{$widget['vars']['email']}</dd>
                         <dt>电话：</dt>
-                        <dd></dd>
+                        <dd>{$widget['vars']['phone']}</dd>
                     </dl>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="http://api.map.baidu.com/api?v=1.3"></script>
+<script>
+	var map   = new BMap.Map("mapCanvas"); // 创建Map实例
+	var point = new BMap.Point({$location_str}); // 创建点坐标
+	map.centerAndZoom(point, 15); // 初始化地图,设置中心点坐标和地图级别。
+	var marker = new BMap.Marker(point); // 创建标注
+	map.addOverlay(marker); // 将标注添加到地图中
+</script>
+</widget>
 </div>
 
 <include file="public@footer"/>
 <!-- /container -->
 <include file="public@scripts"/>
-<script src="http://api.map.baidu.com/api?v=1.3"></script>
-<script>
-	var map   = new BMap.Map("mapCanvas"); // 创建Map实例
-	var point = new BMap.Point("119.329515", "26.05083"); // 创建点坐标
-	map.centerAndZoom(point, 15); // 初始化地图,设置中心点坐标和地图级别。
-	var marker = new BMap.Marker(point); // 创建标注
-	map.addOverlay(marker); // 将标注添加到地图中
-</script>
 <hook name="before_body_end"/>
 </body>
 </html>

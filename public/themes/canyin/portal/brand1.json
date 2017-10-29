@@ -1,0 +1,140 @@
+{
+    "name": "品牌：留萌日式火锅",
+    "action": "portal/List/index",
+    "description": "品牌页模板文件",
+    "order": 4.0,
+    "more": {
+        "vars": {
+            "ads": {
+                "title": "顶部广告图",
+                "value": "",
+                "type": "image",
+                "tip": "（建议上传尺寸：1920px*500px）"
+            }
+        },
+		"widgets": {
+			"mainbox": {
+				"title": "顶部推荐模块",
+                "display": "1",	
+				"vars": {
+					"mainlogo": {
+						"title": "品牌logo",
+						"value": "",
+						"type": "image",
+						"tip": "(上传尺寸：220px*220px)"
+					},
+					"mainthumb": {
+						"title": "品牌主图",
+						"value": "",
+						"type": "image",
+						"tip": "(上传尺寸：375px*340px)"
+					},
+					"description": {
+						"title": "品牌介绍",
+						"value": "",
+						"type": "textarea",
+						"tip": ""
+					}
+                }
+			},
+			"product": {
+                "title": "菜品",
+                "display": "1",
+                "vars": {
+                    "products": {
+                        "title": "菜品管理",
+                        "value": [],
+                        "type": "array",
+                        "item": {
+                            "title": {
+                                "title": "菜品名称",
+                                "value": "",
+                                "type": "text"
+                            },
+							"description": {
+                                "title": "菜品介绍",
+                                "value": "",
+                                "type": "textarea"
+                            },
+                            "thumb": {
+                                "title": "菜品主图",
+                                "value": "",
+                                "type": "image",
+								"tip":"(上传尺寸：770px*510px)"
+                            }
+                        },
+                        "tip": ""
+                    }
+                }
+            },	
+			"xingxiang": {
+                "title": "形象相册",
+                "display": "1",
+                "vars": {
+                    "xingxiangs": {
+                        "title": "相册管理",
+                        "value": [],
+                        "type": "array",
+                        "item": {
+                            "thumb": {
+                                "title": "相册上传",
+                                "value": "",
+                                "type": "image"
+                            }
+                        },
+                        "tip":"(上传尺寸：530px*325px)"
+                    }
+                }
+            },
+			"mengdian":{
+				"title": "门店分布",
+                "display": "1",
+                "vars": {
+                    "shophome": {
+                        "title": "门店管理",
+                        "value": [],
+                        "type": "array",
+                        "item": {
+							"name": {
+                                "title": "门店名称",
+                                "value": "",
+                                "type": "text"
+                            },
+							"shop_location": {
+								"title": "门店坐标",
+								"value": "",
+								"type": "location",
+								"tip": ""
+							}
+                        },
+                        "tip": ""
+                    },
+					"phone": {
+						"title": "加盟热线",
+                        "value": "",
+                        "type": "text",
+                        "tip": ""	
+					},
+					"qq": {
+						"title": "QQ号码",
+                        "value": "",
+                        "type": "text",
+                        "tip": ""	
+					},
+					"weixin": {
+						"title": "上传微信二维码",
+                        "value": "",
+                        "type": "image",
+                        "tip": ""	
+					},
+					"weibo": {
+						"title": "微博号",
+                        "value": "",
+                        "type": "text",
+                        "tip": ""	
+					}
+                }
+            }
+        }
+    }
+}

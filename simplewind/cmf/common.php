@@ -1744,6 +1744,15 @@ function cmf_api_request($url, $params = [])
 }
 
 /**
+* 获取当前ID的分类名称
+*/
+function cmf_get_current_category($id){
+	$currentCate=$id;
+    $categoryName=Db::name('portal_category')->where('id',$currentCate)->find();	
+	return $categoryName['name'];
+}
+
+/**
  * 判断是否允许开放注册
  */
 function cmf_is_open_registration()

@@ -1,0 +1,18 @@
+<php>$categoryId=2;</php>
+<div class="container-fulid categorybox">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 none-padding">
+                <ul class="nav nav-pills" id="news-nav">
+                  <li><a href="{:cmf_url('portal/List/index',array('id'=>$categoryId))}">全部新闻</a></li>
+                  <portal:subCategories categoryId="$categoryId" item="vo">
+                  <li><a href="{:cmf_url('portal/List/index',array('id'=>$vo['id']))}">{$vo.name}</a></li>
+                  </portal:subCategories>
+                </ul>
+            </div>
+            <div class="col-sm-4 hidden-xs text-right none-padding tells">
+                咨询热线：{$theme_vars['contact']}
+            </div>
+        </div>
+    </div>
+</div>

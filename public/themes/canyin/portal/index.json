@@ -1,8 +1,8 @@
 {
     "name": "首页",
     "action": "portal/Index/index",
-    "description": "首页模板文件",
-    "order": 5.0,
+    "description": "配置首页模板文件",
+    "order": 1.0,
     "more": {
         "vars": {
             "top_slide": {
@@ -31,21 +31,25 @@
                         "type": "array",
                         "item": {
                             "title": {
-                                "title": "品牌名",
+                                "title": "品牌名称",
                                 "value": "",
                                 "type": "text",
                                 "rule": {
                                     "require": true
                                 }
                             },
+							"url": {
+                                "title": "品牌链接",
+                                "value": "",
+                                "type": "text"
+                            },
                             "thumb": {
-                                "title": "主图",
+                                "title": "品牌主图",
                                 "value": "",
                                 "type": "image"
                             }
                         },
                         "tip": ""
-
                     }
                 }
             },
@@ -73,24 +77,29 @@
                         "type": "array",
                         "item": {
                             "title": {
-                                "title": "标题",
+                                "title": "品牌名称",
                                 "value": "",
                                 "type": "text"
                             },
+							"url": {
+                                "title": "品牌链接",
+                                "value": "",
+                                "type": "text"
+                            },
+							"content": {
+                                "title": "品牌描述",
+                                "value": "",
+                                "type": "textarea"
+                            },
 							"logo": {
-                                "title": "图标",
+                                "title": "品牌logo",
                                 "value": "",
                                 "type": "image"
                             },
                             "thumb": {
-                                "title": "图标",
+                                "title": "品牌主图",
                                 "value": "",
                                 "type": "image"
-                            },
-                            "content": {
-                                "title": "描述",
-                                "value": "",
-                                "type": "textarea"
                             }
                         },
                         "tip": ""
@@ -113,6 +122,30 @@
                         "placeholder": "请选择分类",
                         "tip": ""
                     }
+                }
+            },
+			"contact": {
+                "title": "联系我们",
+                "display": "1",
+                "vars": {
+					"company_location": {
+						"title": "公司坐标",
+						"value": "",
+						"type": "location",
+						"tip": ""
+					},
+					"address": {
+						"title": "联系地址",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					},
+					"phone": {
+						"title": "联系电话",
+						"value": "",
+						"type": "text",
+						"tip": ""
+					}
                 }
             }
         }

@@ -106,34 +106,37 @@ class ThemeModel extends Model
             $listOrder  = empty($config['order']) ? 0 : floatval($config['order']);
             $configMore = empty($config['more']) ? [] : $config['more'];
             $more       = $configMore;
-
-            if (empty($findFile)) {
-                Db::name('theme_file')->insert([
-                    'theme'       => $theme,
-                    'action'      => $config['action'],
-                    'file'        => $file,
-                    'name'        => $config['name'],
-                    'more'        => json_encode($more),
-                    'config_more' => json_encode($configMore),
-                    'description' => $config['description'],
-                    'is_public'   => $isPublic,
-                    'list_order'  => $listOrder
-                ]);
-            } else { // 更新文件
-                $moreInDb = json_decode($findFile['more'], true);
-                $more     = $this->updateThemeConfigMore($configMore, $moreInDb);
-                Db::name('theme_file')->where(['theme' => $theme, 'file' => $file])->update([
-                    'theme'       => $theme,
-                    'action'      => $config['action'],
-                    'file'        => $file,
-                    'name'        => $config['name'],
-                    'more'        => json_encode($more),
-                    'config_more' => json_encode($configMore),
-                    'description' => $config['description'],
-                    'is_public'   => $isPublic,
-                    'list_order'  => $listOrder
-                ]);
-            }
+			
+			//json没有转换成功就不更新数据库
+            if(!empty($config)){ 
+				if (empty($findFile)) {
+					Db::name('theme_file')->insert([
+						'theme'       => $theme,
+						'action'      => $config['action'],
+						'file'        => $file,
+						'name'        => $config['name'],
+						'more'        => json_encode($more),
+						'config_more' => json_encode($configMore),
+						'description' => $config['description'],
+						'is_public'   => $isPublic,
+						'list_order'  => $listOrder
+					]);
+				} else { // 更新文件
+					$moreInDb = json_decode($findFile['more'], true);
+					$more     = $this->updateThemeConfigMore($configMore, $moreInDb);
+					Db::name('theme_file')->where(['theme' => $theme, 'file' => $file])->update([
+						'theme'       => $theme,
+						'action'      => $config['action'],
+						'file'        => $file,
+						'name'        => $config['name'],
+						'more'        => json_encode($more),
+						'config_more' => json_encode($configMore),
+						'description' => $config['description'],
+						'is_public'   => $isPublic,
+						'list_order'  => $listOrder
+					]);
+				}
+		  	}
         }
 
         // 检查安装过的模板文件是否已经删除

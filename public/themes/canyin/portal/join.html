@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>首页 {$site_info.site_name|default=''}</title>
-    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
-    <meta name="description" content="{$site_info.site_seo_description|default=''}">
+    <title>{$page.post_title}-{$site_info.site_name|default=''}</title>
+    <meta name="keywords" content="{$page.post_keywords}"/>
+    <meta name="description" content="{$page.post_excerpt}">
     <include file="public@head"/>
     <hook name="before_head_end"/>
 		<style>
@@ -15,31 +15,33 @@
 
 <div class="wrapper">
 	<div class="join_banner">
-    	<img src="__TMPL__/public/assets/images/zs_banner.png" alt="" class="img-responsive"/>
+    	<img src="{:cmf_get_image_url($theme_vars['ads'])}" alt="" class="img-responsive"/>
     </div>
-
+    
+    <widget name="mainbox">
     <div class="container companyinfo">
     	<div class="row">
         	<div class="col-xs-12 col-sm-6 text-center">
             	<div class="picbox">
                     <div class="pic1">
-                        <img src="__TMPL__/public/assets/images/zs_img1.jpg" alt="">
+                        <img src="{:cmf_get_image_url($widget['vars']['img1'])}" alt="">
                     </div>
                     <div class="pic2">
-                        <img src="__TMPL__/public/assets/images/zs_img2.jpg" alt="">
+                        <img src="{:cmf_get_image_url($widget['vars']['img2'])}" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
             	<div class="tit"></div>
                 <div class="content">
-                	<p>“这里有”，超级大IP的词汇，也意味着成千上万的可能性；</p><p>
-这里有不论从食物、服装、餐具还是环境，都呈现这样的个性，简约而不失有趣，让每一个接触这里有美食的达人的生活增添更多玩味乐趣。</p>
+                	{:htmlspecialchars_decode($widget['vars']['description'])}
                 </div>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="jiameng">
     <div class="container-fluid joinboxtwo">
     	<div class="container">
            	<div class="row">
@@ -51,44 +53,36 @@
             <div class="row jmlist">
             	<div class="col-lg-10 col-lg-offset-1">
                 <ul class="list-unstyled">
-                    <li class="col-xs-4 none-padding">
-                       <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys1.png" alt="" class="img-responsive">
-                            </div>
-                            <div class="txtbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys1_hover.png" alt="" class="img-responsive">
-                            </div>
-                       </div>
-                    </li>
-
-                    <li class="col-xs-4 none-padding">
-                        <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys2.png" alt="" class="img-responsive">
-                            </div>
-                            <div class="txtbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys2_hover.png" alt="" class="img-responsive">
-                            </div>
-                       </div>
-                    </li>
-
-                    <li class="col-xs-4 none-padding">
-                        <div class="box">
-                            <div class="imgbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys3.png" alt="" class="img-responsive">
-                            </div>
-                            <div class="txtbox">
-                                <img src="__TMPL__/public/assets/images/zs_jmys3_hover.png" alt="" class="img-responsive">
-                            </div>
-                       </div>
-                    </li>
+                <php>
+                    $jiameng_count = count($widget['vars']['jiamengs']);
+                    $rows = ceil($jiameng_count/3);
+                </php>
+                <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                    <php>
+                        $first_row = ($row-1)*3;
+                        $jiamengs = array_slice($widget['vars']['jiamengs'],$first_row,3);
+                    </php>
+                    <foreach name="jiamengs" item="vo">
+                        <li class="col-xs-4 none-padding">
+                           <div class="box">
+                                <div class="imgbox">
+                                    <img src="{:cmf_get_image_url($vo.thumb)}" alt="" class="img-responsive">
+                                </div>
+                                <div class="txtbox">
+                                    <img src="{:cmf_get_image_url($vo.thumbHover)}" alt="" class="img-responsive">
+                                </div>
+                           </div>
+                        </li>
+                    </foreach>
+                </for>
                 </ul>
                 </div>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="baozhang">
     <div class="container-fluid joinboxthree">
     	<div class="container">
            	<div class="row">
@@ -98,51 +92,35 @@
             </div>
 
             <div class="col-xs-12 culist">
-            <div class="row pos-r">
-            	<div class="col-xs-12 col-sm-6 none-padding text-center">
-                	<img src="__TMPL__/public/assets/images/zs_zcbz1.png" alt="" class="img-responsive p-right"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 none-padding text-center">
-                	<p>
-                    	专业厨师研发团队，产品研发总监由日本归来丰富的西餐菜品研发制作经验。
-                    </p>
-                </div>
-                <div class="tbox hidden-xs">
-                	<img src="__TMPL__/public/assets/images/ticon1.png" alt="" class="img-responsive"/>
-                </div>
-            </div>
-
-            <div class="row pos-r">
-            	<div class="col-xs-12 col-sm-6 col-sm-push-6 none-padding text-center">
-                	<img src="__TMPL__/public/assets/images/zs_zcbz2.png" alt="" class="img-responsive p-left"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-sm-pull-6 none-padding text-center">
-                	<p>
-                    	专业厨师研发团队，产品研发总监由日本归来丰富的西餐菜品研发制作经验。
-                    </p>
-                </div>
-                <div class="tbox hidden-xs">
-                	<img src="__TMPL__/public/assets/images/ticon2.png" alt="" class="img-responsive"/>
-                </div>
-            </div>
-
-            <div class="row pos-r">
-            	<div class="col-xs-12 col-sm-6 none-padding text-center">
-                	<img src="__TMPL__/public/assets/images/zs_zcbz3.png" alt="" class="img-responsive p-right"/>
-                </div>
-                <div class="col-xs-12 col-sm-6 none-padding text-center">
-                	<p>
-                    	专业厨师研发团队，产品研发总监由日本归来丰富的西餐菜品研发制作经验。
-                    </p>
-                </div>
-                <div class="tbox hidden-xs">
-                	<img src="__TMPL__/public/assets/images/ticon3.png" alt="" class="img-responsive"/>
-                </div>
-            </div>
+            <php>
+                $baozhang_count = count($widget['vars']['baozhangs']);
+                $rows = ceil($baozhang_count/3);
+            </php>
+            <for start="1" end="$rows" comparison="elt" step="1" name="row">
+                <php>
+                    $first_row = ($row-1)*3;
+                    $baozhangs = array_slice($widget['vars']['baozhangs'],$first_row,3);
+                </php>
+                <foreach name="baozhangs" item="vo">
+                    <div class="row pos-r">
+                        <div class="col-xs-12 col-sm-6 none-padding text-center <if condition='$key%2'>col-sm-push-6</if>">
+                            <img src="{:cmf_get_image_url($vo.thumb)}" alt="" class="img-responsive <if condition='$key%2'>p-left<else/>p-right</if>"/>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 none-padding text-center <if condition='$key%2'>col-sm-pull-6</if>">
+                            <p>{$vo.description}</p>
+                        </div>
+                        <div class="tbox hidden-xs">
+                            <img src="{:cmf_get_image_url($vo.icon)}" alt="" class="img-responsive"/>
+                        </div>
+                    </div>
+                </foreach>
+            </for>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="tiaojian">
     <div class="container-fluid joinboxtwo">
     	<div class="container">
            	<div class="row">
@@ -152,61 +130,27 @@
             </div>
 
             <div class="row jmtjlist">
-            	<div class="col-xs-6 col-sm-3">
-                	<div class="icobox">
-                    	<i>
-                        	<img src="__TMPL__/public/assets/images/zs_jmtj_icon1.png" alt="" class="img-responsive"/>
-                        </i>
+                <php>
+                    $tiaojian = $widget['vars']['tiaojians'];
+                </php>
+                <foreach name="tiaojian" item="vo">
+                    <div class="col-xs-6 col-sm-3">
+                        <div class="icobox">
+                            <i>
+                                <img src="{:cmf_get_image_url($vo.icon)}" alt="" class="img-responsive"/>
+                            </i>
+                        </div>
+                        <div class="caption">
+                            <p>{$vo.description}</p>
+                        </div>
                     </div>
-                    <div class="caption">
-                    	<p>
-                        有强烈的事业成功欲并拥有一定经营管理能力
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-xs-6 col-sm-3">
-                	<div class="icobox">
-                    	<i>
-                        	<img src="__TMPL__/public/assets/images/zs_jmtj_icon2.png" alt="" class="img-responsive"/>
-                        </i>
-                    </div>
-                    <div class="caption">
-                    	<p>
-                        有强烈的事业成功欲并拥有一定经营管理能力
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-xs-6 col-sm-3">
-                	<div class="icobox">
-                    	<i>
-                        	<img src="__TMPL__/public/assets/images/zs_jmtj_icon3.png" alt="" class="img-responsive"/>
-                        </i>
-                    </div>
-                    <div class="caption">
-                    	<p>
-                        有强烈的事业成功欲并拥有一定经营管理能力
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-xs-6 col-sm-3">
-                	<div class="icobox">
-                    	<i>
-                        	<img src="__TMPL__/public/assets/images/zs_jmtj_icon4.png" alt="" class="img-responsive"/>
-                        </i>
-                    </div>
-                    <div class="caption">
-                    	<p>
-                        有强烈的事业成功欲并拥有一定经营管理能力
-                        </p>
-                    </div>
-                </div>
+                </foreach>
             </div>
         </div>
     </div>
-
+    </widget>
+	
+    <widget name="mengdian">
     <div class="container-fluid joinboxthree">
     	<div class="container">
            	<div class="row">
@@ -218,15 +162,16 @@
             <div class="col-xs-12 culist">
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 none-padding text-center">
-                        <img src="__TMPL__/public/assets/images/zs_jmlc_left.png" alt="" class="img-responsive p-right"/>
+                        <img src="{:cmf_get_image_url($widget['vars']['img1'])}" alt="" class="img-responsive p-right"/>
                     </div>
                     <div class="col-xs-12 col-sm-7 none-padding text-center">
-                        <img src="__TMPL__/public/assets/images/zs_jmlc_right.png" alt="" class="img-responsive p-left"/>
+                        <img src="{:cmf_get_image_url($widget['vars']['img2'])}" alt="" class="img-responsive p-left"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </widget>
 </div>
 
 <include file="public@footer"/>
