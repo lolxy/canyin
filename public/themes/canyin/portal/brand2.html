@@ -55,7 +55,7 @@ html,body{background-color: #fff;color:#434343;}
 	<div class="brand_banner">
     	<img src="{:cmf_get_image_url($theme_vars['ads'])}" alt="" class="img-responsive"/>
     </div>
-    
+
     <widget name="mainbox">
     <div class="container brand-main-box">
     	<div class="row">
@@ -75,7 +75,7 @@ html,body{background-color: #fff;color:#434343;}
         </div>
     </div>
     </widget>
-    
+
     <widget name="product">
     <div class="container-fluid brand_product">
     	<div class="container">
@@ -84,7 +84,7 @@ html,body{background-color: #fff;color:#434343;}
                     <span class="sr-only">菜品</span>
                 </h2>
             </div>
-            
+
             <div class="col-xs-12 cplist">
             <php>
                 $product_count = count($widget['vars']['products']);
@@ -113,7 +113,7 @@ html,body{background-color: #fff;color:#434343;}
         </div>
     </div>
     </widget>
-    
+
     <widget name="xingxiang">
     <div class="container-fluid brand-xx-box">
     	<div class="container">
@@ -123,7 +123,7 @@ html,body{background-color: #fff;color:#434343;}
                 </h2>
             </div>
          </div>
-         
+
     	<div class="row">
         	<div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -140,7 +140,7 @@ html,body{background-color: #fff;color:#434343;}
         </div>
     </div>
     </widget>
-    
+
     <!--门店分布-->
     <widget name="mengdian">
 <div class="container-fulid mdfbbox">
@@ -150,7 +150,7 @@ html,body{background-color: #fff;color:#434343;}
                 <span class="sr-only">联系我们</span>
             </h2>
         </div>
-        
+
         <php>
             $mendian = $widget['vars']['shophome'];
         </php>
@@ -166,7 +166,7 @@ html,body{background-color: #fff;color:#434343;}
                 </div>
             </div>
         </div>
-        
+
         <div class="row telbox">
         	<p>加盟热线：{$widget['vars']['phone']}</p>
             <div class="contactStyle">
@@ -187,7 +187,7 @@ function getMap(jingdu,weidu){
 	map.centerAndZoom(point, 15); // 初始化地图,设置中心点坐标和地图级别。
 	var marker = new BMap.Marker(point); // 创建标注
 	map.addOverlay(marker); // 将标注添加到地图中
-} 
+}
 
 getMap({$mendian[0]['shop_location']|default="119.398548,26.001318"});
 </script>
@@ -199,7 +199,8 @@ getMap({$mendian[0]['shop_location']|default="119.398548,26.001318"});
 <script>
 var swiper = new Swiper('.swiper-container', {
 	slidesPerView: 3.5,
-	spaceBetween: 10
+	spaceBetween: 10,
+  slideToClickedSlide:true
 });
 
 $(".tabs li").on("click",function(){

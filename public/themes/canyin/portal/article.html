@@ -31,7 +31,7 @@ html,body{background-color: #fff;color:#434343;}
                 </ol>
             </div>
         </div>
-        
+
         <div class="contentbox">
             <div class="row">
                 <div class="col-xs-12">
@@ -39,14 +39,14 @@ html,body{background-color: #fff;color:#434343;}
                     <span class="fbtime">{:date('Y年m月d日',$article.update_time)}</span>
                 </div>
             </div>
-            
+
             <div class="row">
-            	<div class="col-xs-12 col-sm-7">
+            	<div class="col-xs-12 col-sm-8">
                 	<div class="htmlbox">
                     	{:htmlspecialchars_decode($article.post_content)}
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-5 none-padding">
+                <div class="col-xs-12 col-sm-4 none-padding">
                 	<div class="recomlist">
                     	<ul class="list-unstyled">
                         <portal:allSubCategories categoryId="$currentCid" item="vo">
@@ -89,7 +89,7 @@ html,body{background-color: #fff;color:#434343;}
                                         <span class="time pull-right"><span class="time" title="{:date('Y-m-d H:i:s',$vo.published_time)}"></span></span>
                                     </div>
                                     <div class="tbody">
-                                    	<a href="{:cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}" target="_blank" class="text-overflow-3">{$vo.post_excerpt}</a>
+                                    	<a href="{:cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$vo['category_id']))}" target="_blank" class="text-overflow-2">{$vo.post_excerpt}</a>
                                     </div>
                                 </div>
                             </li>
