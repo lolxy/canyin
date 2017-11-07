@@ -146,7 +146,7 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .recomlist li .tbox{margin-left: 150px;}
 .recomlist li .tbox .theader{color:#434343;overflow: hidden;}
 .recomlist li .tbox .tbody{padding-top: 10px;}
-.recomlist li .tbox .tbody a{font-weight:450;color:#0c0c0c;line-height: 20px;text-decoration:none !important;}
+.recomlist li .tbox .tbody a{font-weight:bold;color:#0c0c0c;line-height: 20px;text-decoration:none !important;}
 .recomlist li .tbox .tbody a:hover{color:#de7c90;text-decoration:none !important;}
 
 /*列表页*/
@@ -266,12 +266,12 @@ h1,h2,h3{margin:20px auto}
 .contentbox .fbtime{margin-bottom: 20px;}
 .htmlbox{font-size: 18px;line-height: 30px;}
 
-.recomlist li{height: 125px;}
+.recomlist li{height: 125px;margin-bottom:15px;}
 .recomlist li .picbox{width: 185px;height: 115px;}
-.recomlist li .tbox{margin-left: 200px;}
+.recomlist li .tbox{margin-left: 210px;}
 .recomlist li .tbox .theader{font-size: 12px;}
 .recomlist li .tbox .tbody{margin-top:20px;}
-.recomlist li .tbox .tbody a{font-size: 18px;line-height: 32px;}
+.recomlist li .tbox .tbody a{font-size: 18px;line-height: 30px;}
 
 .newslistbox li{padding-bottom: 30px;margin-bottom: 30px;}
 .newslistbox li .baseinfo{padding-right: 70px;}
