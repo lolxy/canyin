@@ -57,6 +57,8 @@ h1,h2,h3{margin:0;padding:0;margin:10px auto}
 .dwicon{background:url(../images/dwicon.png) center center no-repeat;background-size:contain}
 .telbox span{word-break:break-all;display:block;margin-left:30px;line-height:30px}
 .footer{height:40px;color:#fefefe;background-color:#434343;text-align:center;line-height:40px;overflow:hidden;position:absolute;bottom:0;left:0;width:100%;}
+.footer a{color:rgba(255,255,255,1)}
+.footer a:hover{color:rgba(255,255,255,0.8)}
 .aboutboxone{padding:40px 0}
 .joinboxthree,.newsbox{padding-bottom:40px}
 .newswrapperbox{padding-bottom: 20px;}
